@@ -1,14 +1,18 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.get('/', function(req, res){
-    console.log('yesyesyes dad idk')
-    res.render('home')
+const mysql = require('mysql');
+const db = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'admin',
+    password : 'GoodEgg303'
+});
+
+db.connect(function(err){
+    if (err) throw err
+    console.log('mysql is connected')
 })
 
-app.listen(5000, function(err){
-    if (err){
-        console.log(err)
-    }
-    console.log('Server is live, and so is your fat ugly body.')
-})
+app.listen(5000);
+
+console.log('Server is live, and so is your fat ugly body.');

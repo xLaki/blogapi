@@ -4,13 +4,14 @@
   "description": "setting up a server idk",
   "main": "api.js",
   "scripts": {
-    "start": "node api.js",
+    "start": "nodemon api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "xLaki",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql": "^2.17.1",
     "nodemon": "^1.19.1"
   }
 }
